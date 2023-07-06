@@ -1,10 +1,10 @@
 import express from "express";
 import mysql from "mysql";
 
-//import cors from "cors";
+import cors from "cors";
 
 const app = express();
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 
@@ -62,12 +62,15 @@ app.get("/books", (req, res) => {
   
     db.query(q, [values], (err, data) => {
       if (err) return res.send(err);
-      return res.json(data);
-    });
+      else
+      {
+        console.log('book created successfully!')
+        return res.json(data);
+      }    });
   });
 
 
-/*
+
 
 
 
@@ -77,7 +80,11 @@ app.delete("/books/:id", (req, res) => {
 
   db.query(q, [bookId], (err, data) => {
     if (err) return res.send(err);
-    return res.json(data);
+    else
+    {
+      console.log('book deleted successfully!')
+      return res.json(data);
+    }
   });
 });
 
@@ -94,7 +101,11 @@ app.put("/books/:id", (req, res) => {
 
   db.query(q, [...values,bookId], (err, data) => {
     if (err) return res.send(err);
-    return res.json(data);
+    else{
+      console.log('book updated successffuly!')
+      return res.json(data);
+    }
   });
 });
-*/
+
+
