@@ -4,8 +4,11 @@ import mysql from "mysql";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  credentials: true,
+  origin: '*',
+  
+}));app.use(express.json());
 
 
 app.listen(3010, () => {
@@ -19,10 +22,11 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   */
- host: "localhost",
- user: "root",
+ host: "cloudproject.cnakm2okvpx0.eu-north-1.rds.amazonaws.com",
+ user: "admin",
  password: "La2101_99",
- database: "app",
+ database: "fpDB",
+ port: '3306',
 });
 
 /*
