@@ -30,7 +30,6 @@ const db = mysql.createConnection({
  user: "admin",
  password: "La2101_99",
  database: "fpDB",
- port: '3306',
 });
 
 /*
