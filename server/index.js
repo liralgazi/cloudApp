@@ -4,11 +4,13 @@ import mysql from "mysql";
 import cors from "cors";
 
 const app = express();
+
+
 app.use(cors({
-  credentials: true,
-  origin: '*',
-  
-}));app.use(express.json());
+  credentials: true,  
+}));
+
+app.use(express.json());
 
 
 app.listen(3010, () => {
