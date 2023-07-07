@@ -23,7 +23,7 @@ const Add = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3010/books", book);
+      await axios.post("http://10.10.8.32:3010/books", book);
       navigate("/");
     } catch (err) {
       console.log(err);

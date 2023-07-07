@@ -24,7 +24,7 @@ const Update = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:3010/books/${bookId}`, book);
+      await axios.put(`http://10.10.8.32:3010/books/${bookId}`, book);
       navigate("/");
     } catch (err) {
       console.log(err);
