@@ -73,9 +73,10 @@ app.get("/books", (req, res) => {
       if (err) return res.send(err);
       else
       {
-        console.log('book created successfully!')
+        console.log('book created successfully!');
         return res.json(data);
-      }    });
+      }    
+    });
   });
 
 
@@ -91,7 +92,7 @@ app.delete("/books/:id", (req, res) => {
     if (err) return res.send(err);
     else
     {
-      console.log('book deleted successfully!')
+      console.log('book deleted successfully!');
       return res.json(data);
     }
   });
