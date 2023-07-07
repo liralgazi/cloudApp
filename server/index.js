@@ -52,10 +52,7 @@ app.get("/books", (req, res) => {
         console.log(err);
         return res.json(err);
       }
-      else{
-        console.log("fetched all the books successfully!")
       return res.json(data);
-      }
     });
   });
 
