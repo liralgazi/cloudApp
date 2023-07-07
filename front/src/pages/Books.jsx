@@ -10,7 +10,7 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:3010/books");
+        const res = await axios.get("http://10.10.8.32:3010/books");
         setBooks(res.data);
       } catch (err) {
         console.log(err);
@@ -23,7 +23,7 @@ const Books = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3010/books/${id}`);
+      await axios.delete(`http://10.10.8.32:3010/books/${id}`);
       window.location.reload()
     } catch (err) {
       console.log(err);
