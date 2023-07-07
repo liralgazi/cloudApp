@@ -10,7 +10,7 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://10.10.8.32:3000/books");
+        const res = await axios.get("http://10.10.8.32:3010/books");
         setBooks(res.data);
       } catch (err) {
         console.log(err);
