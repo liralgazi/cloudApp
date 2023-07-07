@@ -53,7 +53,7 @@ app.get("/books", (req, res) => {
         return res.json(err);
       }
       else{
-        console.log('books fetches successfully !')
+        console.log('books fetches successfully !');
         return res.json(data);
       }
     });
