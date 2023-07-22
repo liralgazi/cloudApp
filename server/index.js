@@ -25,7 +25,7 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   */
- host: "http://final-project-lb-142331911.eu-north-1.elb.amazonaws.com/",
+ host: "cloudproject.cnakm2okvpx0.eu-north-1.rds.amazonaws.com",
  user: "admin",
  password: "La2101_99",
  database: "fpDB",
