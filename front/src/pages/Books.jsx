@@ -41,7 +41,7 @@ const Books = () => {
          */
         
             
-         const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com/books");
+         const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com");
          setBooks(res.data);
       } catch (err) {
          console.log(err);
