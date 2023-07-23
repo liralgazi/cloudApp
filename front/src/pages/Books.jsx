@@ -17,7 +17,7 @@ const Books = () => {
           setBooks(res.data);
         });   
         */      
-        const res = await axios.get("http://10.10.11.147:3010/books");
+        const res = await axios.get("10.10.11.147:3010/books");
         setBooks(res.data);
       } catch (err) {
         console.log(err);
