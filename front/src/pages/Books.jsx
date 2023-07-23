@@ -13,7 +13,7 @@ const Books = () => {
         
         const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com:3010")
         .then(res => {
-          console.log(res);
+          console.log("res" , res);
           console.log('hello');
           setBooks(res.data);
         });   
