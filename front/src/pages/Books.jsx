@@ -53,7 +53,7 @@ const Books = () => {
      fetchAllBooks();
    }, []);
 
-  console.log(books);
+  console.log('books',books);
 
   const handleDelete = async (id) => {
     try {
