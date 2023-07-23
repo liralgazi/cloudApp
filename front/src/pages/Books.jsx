@@ -41,7 +41,7 @@ const Books = () => {
          */
         
             
-         const res = await axios.get("http://localhost3010/books");
+         const res = await axios.get("http://localhost:3010/books");
          setBooks(res.data);
       } catch (err) {
          console.log(err);
