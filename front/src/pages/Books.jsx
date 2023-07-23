@@ -42,8 +42,8 @@ const Books = () => {
             
   //       const res = await axios.get("http://13.53.141.203:3010/books");
   //       setBooks(res.data);
-        const res = await axios.get("http://localhost:3010/books");
-        setBooks(res.data);
+        // const res = await axios.get("http://localhost:3010/books");
+        // setBooks(res.data);
         
   //     } catch (err) {
   //       console.log(err);
