@@ -7,7 +7,7 @@ import { getBooks } from "../api/api";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
-
+/*
   const getAllBooks = React.useCallback(async () => {
     try {
       const { data } = await getBooks();
@@ -26,11 +26,11 @@ const Books = () => {
   useEffect(() => {
     getAllBooks();
   }, [getAllBooks]);
+*/
 
-
-  // useEffect(() => {
-  //   const fetchAllBooks = async () => {
-  //     try {
+  useEffect(() => {
+     const fetchAllBooks = async () => {
+       try {
   //       /*
   //       const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com:3010")
   //       .then(res => {
@@ -40,17 +40,18 @@ const Books = () => {
   //       });   
   //       */
             
-  //       const res = await axios.get("http://13.53.141.203:3010/books");
-  //       setBooks(res.data);
-        // const res = await axios.get("http://localhost:3010/books");
+         const res = await axios.get("http://13.53.141.203:3010/books");
+         setBooks(res.data);
+    //     const res = await axios.get("http://localhost:3010/books");
         // setBooks(res.data);
         
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   fetchAllBooks();
-  // }, []);
+  
+      } catch (err) {
+         console.log(err);
+       }
+     };
+     fetchAllBooks();
+   }, []);
 
   console.log(books);
 
