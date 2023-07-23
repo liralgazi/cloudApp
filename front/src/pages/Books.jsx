@@ -31,17 +31,17 @@ const Books = () => {
   useEffect(() => {
      const fetchAllBooks = async () => {
        try {
-  //       /*
-  //       const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com:3010")
-  //       .then(res => {
-  //         console.log("res" , res);
-  //         console.log('hello');
-  //         setBooks(res.data);
-  //       });   
-  //       */
+         
+         const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com:3010/books")
+         .then(res => {
+           console.log("res" , res);
+           console.log('hello');
+           setBooks(res.data);
+         });   
+        
             
-         const res = await axios.get("http://13.53.141.203:3010/books");
-         setBooks(res.data);
+        // const res = await axios.get("http://13.53.141.203:3010/books");
+         //setBooks(res.data);
     //     const res = await axios.get("http://localhost:3010/books");
         // setBooks(res.data);
         
