@@ -8,7 +8,6 @@ import { getBooks } from "../api/api";
 const Books = () => {
   const [books, setBooks] = useState([]);
 
-
   const getAllBooks = React.useCallback(async () => {
     try {
       const { data } = await getBooks();
@@ -43,6 +42,8 @@ const Books = () => {
             
   //       const res = await axios.get("http://13.53.141.203:3010/books");
   //       setBooks(res.data);
+        const res = await axios.get("http://localhost:3010/books");
+        setBooks(res.data);
         
   //     } catch (err) {
   //       console.log(err);
