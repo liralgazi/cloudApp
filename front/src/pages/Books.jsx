@@ -11,7 +11,7 @@ const Books = () => {
     const fetchAllBooks = async () => {
       try {
         
-        const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com:3010/books")
+        const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com")
         .then(res => {
           console.log(res);
           setBooks(res.data);
