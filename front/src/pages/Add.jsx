@@ -23,8 +23,8 @@ const Add = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://13.53.190.107:3010/books", book);
-      //await axios.post("http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books", book);
+      //await axios.post("http://13.53.190.107:3010/books", book);
+      await axios.post("http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books", book);
       
       navigate("/");
     } catch (err) {
