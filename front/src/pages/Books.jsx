@@ -15,26 +15,7 @@ xhr.open('GET', url);
 xhr.send();
 const Books = () => {
   const [books, setBooks] = useState([]);
-/*
-  const getAllBooks = React.useCallback(async () => {
-    try {
-      const { data } = await getBooks();
 
-      if (data?.code !== 200) {
-        throw new Error();
-      }
-      setBooks(data);
-    } catch (error) {
-      return;
-    } finally {
-    
-    }
-  }, [books]);
-
-  useEffect(() => {
-    getAllBooks();
-  }, [getAllBooks]);
-*/
 
 useEffect(() => {
   const fetchAllBooks = async () => {
