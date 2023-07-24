@@ -6,6 +6,17 @@ import cors from "cors";
 const app = express();
 
 
+// Configure the proxy middleware
+const backendServerUrl = 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010'; // Replace with your backend server's URL
+const proxyOptions = {
+  target: backendServerUrl,
+  changeOrigin: true,
+  // Add any additional options if needed
+};
+const proxyMiddleware = createProxyMiddleware(proxyOptions);
+
+// Use the proxy middleware for all requests
+app.use('/', proxyMiddleware);
 
 app.use(cors({
   credentials: true,
