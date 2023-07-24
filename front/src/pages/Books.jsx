@@ -28,25 +28,24 @@ const Books = () => {
   }, [getAllBooks]);
 */
 
-  useEffect(() => {
-     const fetchAllBooks = async () => {
-       try {
-         //const res = await axios.get("final-project-LB-142331911.eu-north-1.elb.amazonaws.com");
-        const res=  await axios.get("http://localhost:3010/books");
-         setBooks(res.data);
-      } catch (err) {
-         console.log(err);
-       }
-     };
-     fetchAllBooks();
-   }, []);
+useEffect(() => {
+  const fetchAllBooks = async () => {
+    try {
+      const res = await axios.get("http://localhost:3010/books");
+      setBooks(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  fetchAllBooks();
+}, []);
 
   console.log('books',books);
 
   const handleDelete = async (id) => {
     try {
       //await axios.delete(`http://final-project-LB-142331911.eu-north-1.elb.amazonaws.com/books/${id}`);
-      await axios.delete(`http://13.51.234.120:3010/books/${id}`);
+      await axios.delete(`http://localhost:3010/books/${id}`);
       window.location.reload()
     } catch (err) {
       console.log(err);
