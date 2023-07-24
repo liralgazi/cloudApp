@@ -14,10 +14,7 @@ app.use(cors({
 app.use(express.json());
 
 
-app.listen(3010, () => {
-    console.log("Connected to backend.");
-  });
-  
+
 const db = mysql.createConnection({
     /*
   host: process.env.DB_HOST,
@@ -118,4 +115,7 @@ app.put("/books/:id", (req, res) => {
   });
 });
 
+app.listen(3010, () => {
+  console.log("Connected to backend.");
+});
 
