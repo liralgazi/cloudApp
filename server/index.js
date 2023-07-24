@@ -5,9 +5,6 @@ import cors from "cors";
 
 const app = express();
 
-// Use the proxy middleware for all requests
-app.use('/', proxyMiddleware);
-
 app.use(cors({
   credentials: true,
   origin: '*',
