@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/books',
     createProxyMiddleware({
-      target: 'localhost:3000',
+      target: '13.53.141.203:3000',
       changeOrigin: true,
     })
   );
