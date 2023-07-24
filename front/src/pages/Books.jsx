@@ -13,7 +13,6 @@ const url = 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:301
 const xhr = new XMLHttpRequest();
 xhr.open('GET', url);
 xhr.send();
-
 const Books = () => {
   const [books, setBooks] = useState([]);
 /*
