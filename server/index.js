@@ -5,6 +5,16 @@ import cors from "cors";
 
 const app = express();
 
+const url = 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010/books';
+// Or, if your server supports HTTPS, use 'https' instead of 'http'
+// const url = 'https://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010/books';
+
+// Make the XHR request with the full URL
+const xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+xhr.send();
+
+
 
 app.use(cors({
   credentials: true,
