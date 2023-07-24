@@ -15,19 +15,6 @@ app.use(cors({
 
 app.use(express.json());
 
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-const backendServerUrl = 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010/books'; // Replace with your backend server's URL
-
-const proxyMiddleware = createProxyMiddleware({
-  target: backendServerUrl,
-  changeOrigin: true,
-  // Add any additional options if needed
-});
-
-module.exports = proxyMiddleware;
-
-
 const db = mysql.createConnection({
     
 
@@ -42,16 +29,6 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
   */
 });
-
-
-
-/*
-connection.connect((err) => {
-    if (err)
-        console.log(err.message);
-    console.log('db '+ connection.state);
-});
-*/
 
 
 app.get("/", (req, res) => {
