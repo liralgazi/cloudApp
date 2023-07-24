@@ -5,14 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { getBooks } from "../api/api";
 
-const url = 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010/books';
-// Or, if your server supports HTTPS, use 'https' instead of 'http'
-// const url = 'https://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com:3010/books';
 
-// Make the XHR request with the full URL
-const xhr = new XMLHttpRequest();
-xhr.open('GET', url);
-xhr.send();
 const Books = () => {
   const [books, setBooks] = useState([]);
 
@@ -20,8 +13,8 @@ const Books = () => {
 useEffect(() => {
   const fetchAllBooks = async () => {
     try {
-      //const res = await axios.get('http://16.16.24.178:3010/books');
-      const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
+      const res = await axios.get('http://13.53.190.107:3010/books');
+      //const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
       setBooks(res.data);
     } catch (err) {
       console.log(err);
@@ -34,8 +27,8 @@ useEffect(() => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
-      //await axios.delete(`http://16.16.24.178:3010/books/${id}`);
+      //await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
+      await axios.delete(`http://13.53.190.107:3010/books/${id}`);
       window.location.reload()
     } catch (err) {
       console.log(err);
