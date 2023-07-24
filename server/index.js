@@ -17,15 +17,16 @@ app.use(express.json());
 
 const db = mysql.createConnection({
     /*
+
+   host: "cloudproject.cnakm2okvpx0.eu-north-1.rds.amazonaws.com",
+ user: "admin",
+ password: "La2101_99",
+ database: "fpDB",
+  */
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  */
- host: "cloudproject.cnakm2okvpx0.eu-north-1.rds.amazonaws.com",
- user: "admin",
- password: "La2101_99",
- database: "fpDB",
 });
 
 /*
