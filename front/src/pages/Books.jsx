@@ -31,7 +31,7 @@ const Books = () => {
 useEffect(() => {
   const fetchAllBooks = async () => {
     try {
-      const res = await axios.get("http://13.51.234.120:3010/books");
+      const res = await axios.get('http://13.51.234.120:3010/books');
       console.log('fetched');
       setBooks(res.data);
     } catch (err) {
