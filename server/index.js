@@ -1,5 +1,6 @@
 import express from "express";
 import mysql from "mysql";
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 import cors from "cors";
 
