@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/books',
     createProxyMiddleware({
-      target: 'http://16.16.24.178:3010',
+      target: 'http://cloud-project-lb-1993630990.eu-north-1.elb.amazonaws.com::3010',
       changeOrigin: true,
     })
   );
