@@ -27,8 +27,8 @@ useEffect(() => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
-      //await axios.delete(`http://13.53.190.107:3010/books/${id}`);
+      //await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
+      await axios.delete(`http://13.53.190.107:3010/books/${id}`);
       window.location.reload()
     } catch (err) {
       console.log(err);
