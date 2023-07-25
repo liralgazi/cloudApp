@@ -25,7 +25,7 @@ const Home = () => {
           fontWeight: "bold",
         }}
       >
-        <h1 style={{ fontSize: 60 }}>WELCOM</h1>
+        <h1 style={{ fontSize: 60 }}>WELCOME</h1>
         <div style={{ fontSize: 40 }}>To Your Private Book Store</div>
         <div style={{ paddingTop: 40 }}>
           <button

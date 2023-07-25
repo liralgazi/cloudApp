@@ -24,8 +24,8 @@ const Update = () => {
     e.preventDefault();
 
     try {
-      //await axios.put(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${bookId}`, book);
-      await axios.put(`http://13.53.190.107:3010/books/${bookId}`, book);
+      await axios.put(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${bookId}`, book);
+      //await axios.put(`http://13.53.190.107:3010/books/${bookId}`, book);
       //await axios.put(`http://localhost:3010/books/${bookId}`, book);
       navigate("/");
     } catch (err) {
