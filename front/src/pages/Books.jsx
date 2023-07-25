@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { getBooks } from "../api/api";
 
 
 const Books = () => {
@@ -13,9 +12,11 @@ const Books = () => {
 useEffect(() => {
   const fetchAllBooks = async () => {
     try {
+     const res = await axios.get("http://localhost:3000");
+     console.log('res',res)
       //const res = await axios.get('http://13.53.190.107:3010/books');
-      const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
-      setBooks(res.data);
+      //const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
+      setBooks(res?.data);
     } catch (err) {
       console.log(err);
     }
@@ -27,7 +28,8 @@ useEffect(() => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
+      await axios.delete("http://localhost:3000");
+     // await axios.delete(`http://cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books/${id}`);
       //await axios.delete(`http://13.53.190.107:3010/books/${id}`);
       window.location.reload()
     } catch (err) {
@@ -39,7 +41,7 @@ useEffect(() => {
     <div>
       <h1>My Books Shop</h1>
       <div className="books">
-        {books.map((book) => (
+        {books?.map((book) => (
           <div key={book.id} className="book">
             {book.cover && <img src={book.cover} alt="" />}
             <h2>{book.title}</h2>
