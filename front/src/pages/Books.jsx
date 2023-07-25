@@ -13,8 +13,8 @@ const Books = () => {
 useEffect(() => {
   const fetchAllBooks = async () => {
     try {
-      //const res = await axios.get('http://13.53.190.107:3010/books');
-      const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
+      const res = await axios.get('http://13.53.190.107:3010/books');
+      //const res = await axios.get('cloud-project-LB-1993630990.eu-north-1.elb.amazonaws.com:3010/books');
       setBooks(res.data);
     } catch (err) {
       console.log(err);
