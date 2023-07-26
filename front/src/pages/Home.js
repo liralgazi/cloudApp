@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(/../../books.png)",
+        backgroundImage: "url(/../books.png)",
         height: 900,
         width: 1500,
         backgroundSize: "cover",

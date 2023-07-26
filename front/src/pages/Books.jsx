@@ -40,8 +40,9 @@ useEffect(() => {
 
   return (
     <div>
-      <h1>My Book Shop</h1>
-      <div className="books">
+ <h1 style={{ color: "#7ABF9C", fontSize: "48px", fontFamily: "Roboto, sans-serif" }}>
+        My Book Shop
+      </h1>      <div className="books">
         {books.map((book) => (
           <div key={book.id} className="book">
             {book.cover && <img src={book.cover} alt="" />}

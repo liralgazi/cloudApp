@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #ccdcc6;
 }
   
 .books {
@@ -23,24 +24,26 @@ img {
     width: 200px;
     height: 300px;
     object-fit: cover;
-    background-color: aquamarine;
+    background-color: rgb(191, 231, 218);
+    border-radius: 10px;
+
       }
 .delete{
     border: none;
     padding: 3x 6px;
-            background-color:  white;
+            background-color:  #e05730;
             cursor: pointer;
-            border: 1px solid pink;
-            color: pink;
+            border: 1px solid white;
+            color: white;
         }
 
     .update{
         border: none;
         padding: 3x 6px;
-        background-color:  white;
+        background-color:  #84bb45;
         cursor: pointer;
-        border: 1px solid aqua;
-        color: aqua; 
+        border: 1px solid white;
+        color: white; 
     }
   
     .form {
@@ -67,6 +70,7 @@ img {
         cursor: pointer;
         width:fit-content;
         align-items: center;
+        border-radius: 10px;
       }
 
 
